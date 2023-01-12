@@ -1,0 +1,12 @@
+# MacOS Generated Files
+.DS_Store
+
+# Node
+node_modules/
+
+# Environment vairables
+.env
+.env.local
+
+# Build files
+build/

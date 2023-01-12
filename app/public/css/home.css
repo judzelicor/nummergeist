@@ -1,0 +1,13 @@
+.homepage-78031--buttonType {
+    background-color: var(--button-primary-bg);
+    border-radius: 0.4375rem;
+    color: var(--button-primary-fg);
+    font-size: 0.875rem;
+    height: 40px;
+    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+    width: 160px;
+}
+
+.homepage-78031--buttonType:active {
+    transform: scale(0.95);
+}

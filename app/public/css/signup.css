@@ -1,0 +1,39 @@
+.footer-98017--formWrapperType {
+    max-width: 450px;
+}
+
+.signupPage-76129--formLabelType {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.signupPage-76129--formInputType {
+    border-radius: 0.4375rem;
+    box-shadow: 0 0 0 1px #afb8c1;
+    color: var(--input-primary-fg);
+    font-size: 0.875rem;
+    padding: 0.75rem 0.875rem;
+    width: 100%;
+}
+
+.signupPage-76129--formInputType::placeholder {
+    color: var(--primary-fg);
+}
+
+.signupPage-76129--formGroupType {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0.875rem;
+}
+
+.footer-98017--formSignupButtonType {
+    background-color: var(--button-primary-bg);
+    border-radius: 0.4375rem;
+    color: var(--button-primary-fg);
+    font-size: 0.875rem;
+    height: 39px;
+    width: 120px;
+}

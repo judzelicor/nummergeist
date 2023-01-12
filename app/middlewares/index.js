@@ -1,0 +1,1 @@
+export { default as cookieParser } from "./cookiesMiddleware.js";
