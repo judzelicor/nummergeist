@@ -429,6 +429,11 @@ button {
     cursor: pointer;
 }
 
+svg {
+    height: 100%;
+    width: 100%;
+}
+
 /* TOPBAR */
 
 .topbar-82618--listType {
