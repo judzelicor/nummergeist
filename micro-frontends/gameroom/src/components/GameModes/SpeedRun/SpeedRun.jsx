@@ -115,8 +115,8 @@ function SpeedRun() {
                                                             if (gameIsRunning) {
                                                                 setUserInput(event.target.value)
                                                             }
-                                                            console.log(event.target.value, arithmeticQuestion.getSolution())
-                                                            if (parseInt(event.target.value) === arithmeticQuestion.getSolution()) {
+
+                                                            if (event.target.value === arithmeticQuestion.getSolution().toString()) {
                                                                 setInputIsCorrect(true)
                                                                 setTimeout(() => {
                                                                     generateSubsequentArithmeticQuestion()
