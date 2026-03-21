@@ -14,7 +14,7 @@ import { Game } from "../../../game";
 import BufferTimer from "../../BufferTimer/BufferTimer.jsx";
 import * as buffer from "buffer";
 
-const correctSFX = new Audio("/nummergeist/correct.mp3");
+const correctSFX = new Audio(`${import.meta.env.BASE_URL}correct.mp3`);
 
 function SpeedRun() {
     const roundDurationInSeconds = useSelector(state => state.gameState.gameRoundPreferences.durationInSeconds)

@@ -2,7 +2,7 @@ import {useEffect, createRef, useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import { Game } from "../../game";
 
-const fanfareSFX = new Audio("/nummergeist/fanfare-success.mp3");
+const fanfareSFX = new Audio(`${import.meta.env.BASE_URL}fanfare-success.mp3`);
 
 function GameOverModal() {
     const showGameOverModal = useSelector(state => state.gameState.showGameOverModal);
