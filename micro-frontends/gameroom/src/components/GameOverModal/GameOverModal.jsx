@@ -2,7 +2,7 @@ import {useEffect, createRef, useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import { Game } from "../../game";
 
-const fanfareSFX = new Audio("/fanfare-success.mp3");
+const fanfareSFX = new Audio("/nummergeist/fanfare-success.mp3");
 
 function GameOverModal() {
     const showGameOverModal = useSelector(state => state.gameState.showGameOverModal);
@@ -60,7 +60,7 @@ function GameOverModal() {
         const sfx = fanfareSFX.cloneNode();
         sfx.volume = 0.25;
         sfx.play();
-        
+
         return (
             <>
                 <div className="gameOverModal-76552--containerType">
