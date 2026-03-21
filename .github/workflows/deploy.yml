@@ -17,9 +17,11 @@ jobs:
 
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
+        working-directory: microfrontends/gameroom
 
       - name: Build
         run: yarn build
+        working-directory: microfrontends/gameroom
 
       - name : Deploy to VPS
         run: |
@@ -35,7 +37,7 @@ jobs:
           ssh $SSH_OPTS ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "mkdir -p $TARGET"
 
           # Upload build artifacts
-          rsync -az --delete -e "ssh $SSH_OPTS" dist/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:$TARGET/
+          rsync -az --delete -e "ssh $SSH_OPTS" micro-frontends/gameroom/dist/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:$TARGET/
 
           # Atomic symlink swap
           ssh $SSH_OPTS ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "\
