@@ -31,7 +31,7 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
           SSH_OPTS="-o StrictHostKeyChecking=no -i ~/.ssh/deploy_key -p 2222"
 
-          RELEASE="release-$(date + %s)"
+          RELEASE="release-$(date +%s)"
           TARGET="/var/www/nummergeist.judzelicor.com/releases/$RELEASE"
 
           # Create release directory
