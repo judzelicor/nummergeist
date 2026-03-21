@@ -1,13 +1,14 @@
 import React from "react";
 import {
     Outlet,
+    Link,
     useNavigate
 } from "react-router-dom";
 
 class LobbyPage extends React.PureComponent {
     render() {
 
-        const {navigate } = this.props;
+        const { navigate } = this.props;
 
         return (
             <>
@@ -15,7 +16,7 @@ class LobbyPage extends React.PureComponent {
                     <h1>This is the lobby</h1>
                     <ul>
                         <li>
-                            <button className="lobbyComponent-34081--buttonType" onClick={() => navigate("/game-room/speedrun")}>
+                            <Link className="lobbyComponent-34081--buttonType" to="/game-room/speedrun">
                                 <div className="lobbyComponent-34081--iconType">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
                                         <path d="M48.702 17.686a6.155 6.155 0 0 0 6.15-6.15c-.286-8.14-12.015-8.139-12.3 0a6.155 6.155 0 0 0 6.15 6.15zm-4.664 20.838-3.53-3.49a1.112 1.112 0 0 1-.147-1.409c1.494-2.254 3.665-5.501 5.173-7.764 1.507-2.003 1.584-4.404-.91-6.718-1.619-.834-4.334-2.92-6.209-2.806l-9.338-.147a4.956 4.956 0 0 0-3.442 1.33l-6.229 5.838a3.667 3.667 0 0 0-1.163 2.63 3.71 3.71 0 0 0 6.287 2.66l3.843-3.843a1.848 1.848 0 0 1 1.389-.538l2.718.137c-4.116 5.818-7.683 9.606-.518 15.294.974.882 3.031 2.698 4.019 3.598a2.514 2.514 0 0 1 .84 1.877v9.26a4.175 4.175 0 0 0 8.351-.03l-.097-13.425a3.465 3.465 0 0 0-1.037-2.454z"/>
@@ -23,10 +24,10 @@ class LobbyPage extends React.PureComponent {
                                     </svg>
                                 </div>
                                 <p>Speed Run</p>
-                            </button>
+                            </Link>
                         </li>
                         <li>
-                            <button className="lobbyComponent-34081--buttonType" onClick={() => navigate("/game-room/sprint50")}>
+                            <Link className="lobbyComponent-34081--buttonType" to="/game-room/sprint50">
                                 <div className="lobbyComponent-34081--iconType">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
                                         <g>
@@ -36,7 +37,7 @@ class LobbyPage extends React.PureComponent {
                                     </svg>
                                 </div>
                                 <p>Sprint 50</p>
-                            </button>
+                            </Link>
                         </li>
                         <li>
                             <button className="lobbyComponent-34081--buttonType">
