@@ -3,6 +3,7 @@ import {useSelector, useDispatch} from "react-redux";
 import { Game } from "../../game";
 
 const fanfareSFX = new Audio(`${import.meta.env.BASE_URL}fanfare-success.mp3`);
+fanfareSFX.preload = "auto";
 
 function GameOverModal() {
     const showGameOverModal = useSelector(state => state.gameState.showGameOverModal);
