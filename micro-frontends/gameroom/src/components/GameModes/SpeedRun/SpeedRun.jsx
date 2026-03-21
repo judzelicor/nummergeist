@@ -150,21 +150,6 @@ function SpeedRun() {
                         <div className="gameRoom-79991--groupWrapperType">
                             <h2 className="gameRoom-78651--headerType">Duration</h2>
                             <ul className="gameRoom-02919--listType">
-                                {/*<li>*/}
-                                {/*    <DurationButton*/}
-                                {/*        durationIndicator={30}*/}
-                                {/*    />*/}
-                                {/*</li>*/}
-                                {/*<li>*/}
-                                {/*    <DurationButton*/}
-                                {/*        durationIndicator={60}*/}
-                                {/*    />*/}
-                                {/*</li>*/}
-                                {/*<li>*/}
-                                {/*    <DurationButton*/}
-                                {/*        durationIndicator={120}*/}
-                                {/*    />*/}
-                                {/*</li>*/}
                                 <li>
                                     <Toggles.DurationButton
                                         seconds={30}
@@ -209,25 +194,6 @@ function SpeedRun() {
                                         placeValue={"thousands"}
                                     />
                                 </li>
-                                {/*<li>*/}
-                                {/*    <GenericCheckbox*/}
-                                {/*        label={"ones"}*/}
-                                {/*        gameStateID={1}*/}
-                                {/*    />*/}
-                                {/*</li>*/}
-                                {/*<li>*/}
-                                {/*    <GenericCheckbox*/}
-                                {/*        label={"tens"}*/}
-                                {/*        gameStateID={2}*/}
-                                {/*    />*/}
-
-                                {/*</li>*/}
-                                {/*<li>*/}
-                                {/*    <GenericCheckbox*/}
-                                {/*        label={"hundreds"}*/}
-                                {/*        gameStateID={3}*/}
-                                {/*    />*/}
-                                {/*</li>*/}
                             </ul>
                         </div>
                         <div className="gameRoom-79991--groupWrapperType">
