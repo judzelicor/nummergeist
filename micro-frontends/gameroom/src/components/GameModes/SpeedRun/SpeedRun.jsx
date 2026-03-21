@@ -14,6 +14,8 @@ import { Game } from "../../../game";
 import BufferTimer from "../../BufferTimer/BufferTimer.jsx";
 import * as buffer from "buffer";
 
+const correctSFX = new Audio("/correct.mp3");
+
 function SpeedRun() {
     const roundDurationInSeconds = useSelector(state => state.gameState.gameRoundPreferences.durationInSeconds)
     const dispatch = useDispatch();
@@ -85,6 +87,7 @@ function SpeedRun() {
             {
                 gameIsRunning ?
                 <div>
+                    <div className="comboindicator"></div>
                     {
                         arithmeticQuestions.slice(0, 1).map(arithmeticQuestion => {
                             return (
@@ -119,6 +122,10 @@ function SpeedRun() {
 
                                                             if (event.target.value === arithmeticQuestion.getSolution().toString()) {
                                                                 setInputIsCorrect(true)
+                                                                const sfx = correctSFX.cloneNode();
+                                                                sfx.volume = 0.15;
+                                                                sfx.play();
+
                                                                 setTimeout(() => {
                                                                     generateSubsequentArithmeticQuestion()
                                                                 }, 72)
