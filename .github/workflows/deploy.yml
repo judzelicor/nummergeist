@@ -14,14 +14,15 @@ jobs:
         with:
           node-version: 20
           cache: yarn
+          cache-dependency-path: micro-frontends/gameroom/yarn.lock
 
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
-        working-directory: microfrontends/gameroom
+        working-directory: micro-frontends/gameroom
 
       - name: Build
         run: yarn build
-        working-directory: microfrontends/gameroom
+        working-directory: micro-frontends/gameroom
 
       - name : Deploy to VPS
         run: |
