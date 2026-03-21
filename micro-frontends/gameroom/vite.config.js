@@ -8,6 +8,7 @@ export default defineConfig({
       react(),
       analyze()
   ],
+  base: "/nummergeist/",
   build: {
     outDir: "./dist",
     rollupOptions: {
