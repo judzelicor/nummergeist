@@ -2,9 +2,6 @@ import {useEffect, createRef, useState} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import { Game } from "../../game";
 
-const fanfareSFX = new Audio(`${import.meta.env.BASE_URL}fanfare-success.mp3`);
-fanfareSFX.preload = "auto";
-
 function GameOverModal() {
     const showGameOverModal = useSelector(state => state.gameState.showGameOverModal);
     const arithmeticQuestionsAnswered = useSelector(state => state.gameState.arithmeticQuestionsAnswered);
@@ -58,6 +55,8 @@ function GameOverModal() {
     }, [showGameOverModal]);
 
     if (showGameOverModal) {
+        const fanfareSFX = new Audio(`${import.meta.env.BASE_URL}fanfare-success.mp3`);
+
         const sfx = fanfareSFX.cloneNode();
         sfx.volume = 0.25;
         sfx.play();

@@ -14,9 +14,6 @@ import { Game } from "../../../game";
 import BufferTimer from "../../BufferTimer/BufferTimer.jsx";
 import * as buffer from "buffer";
 
-const correctSFX = new Audio(`${import.meta.env.BASE_URL}correct.mp3`);
-correctSFX.preload = "auto";
-
 function SpeedRun() {
     const roundDurationInSeconds = useSelector(state => state.gameState.gameRoundPreferences.durationInSeconds)
     const dispatch = useDispatch();
@@ -123,6 +120,8 @@ function SpeedRun() {
 
                                                             if (event.target.value === arithmeticQuestion.getSolution().toString()) {
                                                                 setInputIsCorrect(true)
+                                                                const correctSFX = new Audio(`${import.meta.env.BASE_URL}correct.mp3`);
+
                                                                 const sfx = correctSFX.cloneNode();
                                                                 sfx.volume = 0.15;
                                                                 sfx.play();
