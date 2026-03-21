@@ -108,6 +108,7 @@ function SpeedRun() {
                                                         className={`gameEntity-35812--inputType ${inputIsCorrect && "correct"}`}
                                                         title={"text"}
                                                         disabled={!gameTimerIsRunning}
+                                                        autoComplete="off"
                                                         value={userInput}
                                                         maxLength={5}
                                                         autoFocus
