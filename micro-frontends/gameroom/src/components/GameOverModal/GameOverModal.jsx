@@ -1,4 +1,4 @@
-import {useEffect, createRef, useState} from "react";
+import {useEffect, createRef, useState, useRef} from "react";
 import {useSelector, useDispatch} from "react-redux";
 import { Game } from "../../game";
 
@@ -9,8 +9,14 @@ function GameOverModal() {
     const roundDurationInSeconds = useSelector(state => state.gameState.gameRoundPreferences.durationInSeconds)
     const dispatch = useDispatch();
     const confettiRef = createRef();
+    const fanfareSFXRef = useRef(null);
 
     useEffect(() => {
+  fanfareSFXRef.current = new Audio(`${import.meta.env.BASE_URL}fanfare-success.mp3`);
+}, []);
+
+useEffect(() => {
+        
         if (showGameOverModal) {
             const duration = 5 * 1000;
             const end = Date.now() + duration;
@@ -55,9 +61,8 @@ function GameOverModal() {
     }, [showGameOverModal]);
 
     if (showGameOverModal) {
-        const fanfareSFX = new Audio(`${import.meta.env.BASE_URL}fanfare-success.mp3`);
 
-        const sfx = fanfareSFX.cloneNode();
+        const sfx = fanfareSFXRef.current.cloneNode();
         sfx.volume = 0.25;
         sfx.play();
 

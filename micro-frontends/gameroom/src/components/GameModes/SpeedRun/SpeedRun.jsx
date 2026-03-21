@@ -29,6 +29,8 @@ function SpeedRun() {
     const operationsRoster = useSelector(state => state.gameState.gameRoundPreferences.operationsRoster);
     const roundOptions = useSelector(state => state.gameState.gameRoundPreferences.miscellaneousOptions);
     const inputRef = useRef();
+    const correctSFXRef = useRef(null);
+
 
     const startGame = () => {
         if (!bufferTimerIsEnabled) {
@@ -73,6 +75,10 @@ function SpeedRun() {
         })
 
     }, [])
+
+        useEffect(() => {
+  correctSFXRef.current = new Audio(`${import.meta.env.BASE_URL}correct.mp3`);
+}, []);
 
     useEffect(() => {
         if (inputRef.current && gameTimerIsRunning) {
@@ -122,7 +128,7 @@ function SpeedRun() {
                                                                 setInputIsCorrect(true)
                                                                 const correctSFX = new Audio(`${import.meta.env.BASE_URL}correct.mp3`);
 
-                                                                const sfx = correctSFX.cloneNode();
+                                                                const sfx = correctSFXRef.current.cloneNode();
                                                                 sfx.volume = 0.15;
                                                                 sfx.play();
 
