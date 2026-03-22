@@ -126,7 +126,6 @@ function SpeedRun() {
 
                                                             if (event.target.value === arithmeticQuestion.getSolution().toString()) {
                                                                 setInputIsCorrect(true)
-                                                                const correctSFX = new Audio(`${import.meta.env.BASE_URL}correct.mp3`);
 
                                                                 const sfx = correctSFXRef.current.cloneNode();
                                                                 sfx.volume = 0.15;
